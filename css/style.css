@@ -1,0 +1,289 @@
+/* GENERAL */
+
+.logo img{
+    height: 200px;
+    width: 200px;
+    margin-left: 15px;
+}
+
+ ul{
+    list-style-type: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+a{
+    text-decoration: none; 
+    color: white;
+    font-size: 25px;
+    transition: all 1s;
+}
+
+a:hover{font-size: 35px; background-color: mediumblue;}
+
+li{
+    padding: 20px;
+    margin: 20px;
+}
+
+.p20{padding:20px;}
+
+.mb20{margin-bottom: 20px;}
+
+.m20{margin: 20px;}
+
+.bgPrincipal{background-color: blue;}
+
+.bgLgrey{background-color: lightgray;}
+
+.flexCard{display:flex;flex-direction: column;}
+
+.card{border-radius: 20px;align-items: center;}
+
+.card input{width: 80%; height: 40px; border-radius:20px;transition:1s all;}
+
+.card input:hover{box-shadow:inset 0 -3em 3em rgba(0,0,0,0.1),
+    0 0  0 2px rgb(255,255,255),
+    0.3em 0.3em 1em rgba(0,0,0,0.3); cursor:pointer; width: 30%;}
+
+div h1{text-align: left;}
+
+.img-fluid{width:100%;height: auto;}
+
+h1{font-size:35px;font-family: serif;margin-left: 15px;}
+
+h2{font-size:25px;font-family: serif;margin-left: 15px;padding: 20px;}
+
+p{
+    font-size:20px;
+    font-family: sans-serif;
+    letter-spacing: 1.5px;margin-left: 25px;
+}
+
+
+
+footer{background-color: blue;}
+
+*{padding: 0;margin: 0;}
+
+/* VISTA DESKTOP */
+
+    /* GRID INDEX */
+@media (min-width:1024px){
+    .grid{
+        display:grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+    header{grid-area: header;}
+    main{grid-area: main;}
+    footer{grid-area: footer;}
+
+    .gridMain{
+        display: grid;
+        grid-template-areas: 
+        "encabezado encabezado"
+        "parrafo imgInicio"
+        "iconosInicio iconosInicio";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+    }
+    .encabezado{grid-area: encabezado;}
+    .parrafo{grid-area: parrafo;}
+    .imgInicio{grid-area: imgInicio;}
+    .iconosInicio{grid-area: iconosInicio;}
+
+    .tapas img{
+        height: 200px;
+        width: 400px;
+        padding: 10px;
+        border-radius: 20px;
+        margin-left: 120px;
+    }
+   
+    .liquido img{
+        height: 250px;
+        width: 200px;
+        margin-left: 75px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    
+    .iconosInicio img{
+        height: 200px;
+        width: 200px;
+        padding: 20px;
+    }
+
+    .iconosInicio{
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
+
+
+    /* GRID PRODUCTOS */
+
+    .gridProductos{
+        display:grid;
+        grid-template-areas:
+        "encProductos encProductos encProductos encProductos"
+        "parrafo parrafo parrafo parrafo"
+        "card1 card2 card3 card4";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto;
+    }
+    .encabezadoServicios{grid-template-columns: encProductos;}
+    .parrafo{grid-area: parrafo;}
+    .card1{grid-area:card1;}
+    .card2{grid-area:card2;}
+    .card3{grid-area:card3;}
+    .card4{grid-area:card4;}
+
+    /* GRID SERVICIOS */
+
+    .gridServicios{
+        display: grid;
+        grid-template-areas:
+        "encServicios encServicios"
+        "parrafoServicios parrafoServicios"
+        "imgServicios imgServicios";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+
+    .encServicios{grid-area: encServicios;}
+    .parrafoServicios{grid-area: parrafoServicios;}
+    .imgServicios{grid-area: imgServicios;}
+
+    .parrafoServicios{text-align: center;}
+
+    div .imgServicios img{
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 200px;
+        width: 200px;
+        border-radius: 20px;
+    }
+
+
+    /* GRID NOSOTROS */
+
+    .gridNosotros{
+        display: grid;
+        grid-template-areas: 
+        "encNosotros imgNosotros"
+        "parrafoArriba imgNosotros"
+        "parrafoAbajo imgNosotros";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+    }
+
+    .encNosotros{grid-area: encNosotros;}
+    .imgNosotros{grid-area: imgNosotros;}
+    .parrafoArriba{grid-area: parrafoArriba;}
+    .parrafoAbajo{grid-area: parrafoAbajo;}
+    
+
+    .imgNosotros img {
+        height: 550px;
+        width: 400px;
+        border-radius: 20px;
+        margin-left: 120px;
+        }
+    
+
+
+
+    /* GRID CONTACTO */
+
+    .gridContacto{
+        display: grid;
+        grid-template-areas: 
+        "encContacto encContacto"
+        "datosContacto datosContacto"
+        "mapa formulario";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+    }
+    .encContacto{grid-area: encContacto;}
+    .datosContacto{grid-area: datosContacto;}
+    .mapa{grid-area: mapa;}
+    .formulario{grid-area: formulario;}
+
+    .pContacto{text-align: center;}
+
+    .formulario form{
+        display:flex;
+        flex-direction: column; 
+        row-gap: 30px;
+    }
+
+    .logoFoo img{
+        height: 200px;
+        width: 200px;
+    }
+
+    footer .logoFoo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer ul{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .jCSpaceBetween{justify-content: space-between;}
+
+    .iconosFoo img{
+        height: 50px;
+        width: 50px;
+        padding: 20px;
+    }
+
+    footer .iconosFoo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+
+
+
+
+/* VISTA MOBILE */
+
+@media (max-width:768px){
+    ul{display: flex;flex-direction: row; justify-content: center;padding-left:0;}
+    li{padding:2px;margin:2px;}
+    main, footer, header{display:flex;flex-direction: column;align-items: center;}
+    .gridMain{display:flex;flex-direction: column;}
+    .desaparecer{display:none;}
+    .gridProductos{display:flex;flex-direction: column;}
+    h1{font-size:30px; text-align: center;}
+    h2{font-size:20px; text-align: center;}
+    p{font-size:18px;text-align: center;}
+    .gridContacto, .formulario form, .datosContacto{display:flex;flex-direction:column;}
+    .imgContacto img {height: 300px; width: 300px;}
+    .gridServicios{display:flex;flex-direction: column;}
+    .imgServicios{margin-left: 50px;}
+    .gridNosotros{display:flex;flex-direction: column;}
+    .imgNosotros img{height: 300px; width: 200px; margin-left: 20px;}
+}
+
+
+/* VISTA TABLET */
+
+@media (min-width:769px) and (max-width:1023px){}
